@@ -1,0 +1,24 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "YOLO",
+    "name": "YOLO",
+    "symbol": "YOLO",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "economics": {
+    "poolBps": 6000,
+    "initialMarketCapWei": "2300000000000000000000",
+    "remainderTo": "0x5873ba51e1fe4a03d1b74528f60678885de4e765"
+  },
+  "notes": "YOLO (src/YOLO.sol) is a fixed-supply ERC-20 built on unmodified OpenZeppelin v5 ERC20. Its constructor takes no arguments and mints exactly 1,000,000,000 YOLO (1000000000000000000000000000 minor units, 18 decimals) once to msg.sender, which at launch is the factory. Transfers arrive in full: there are no fees, taxes, burns, rebases, allowlists or transfer restrictions, so the swarm share, the pool seed, claims and swaps all move exactly what they say. The token exposes no mint, burn, owner, pause, blacklist, freeze, seize, initializer, upgrade or proxy mechanism; the supply can neither grow nor shrink after construction, and no privileged call exists. The constructor makes no external calls. The launch deploys no application contracts. The factory takes the swarm's share, seeds the pool with the requester's 60% of supply against IMD at the 2,300 IMD opening market cap derived from economics, and forwards the remaining 30% to economics.remainderTo."
+}
